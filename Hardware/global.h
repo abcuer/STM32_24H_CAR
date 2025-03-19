@@ -1,0 +1,71 @@
+#ifndef __GLOBAL_H
+#define __GLOBAL_H
+
+
+#pragma once
+#include "math.h"
+#include "Delay.h"
+#include "LED.h"
+#include "Key.h"
+#include "Timer.h"
+#include "Encoder.h"
+#include "Motor_Run.h"
+#include "Serial.h"
+#include "pid.h"
+#include "gray_track.h"
+#include "mpu6050.h"
+#include "inv_mpu.h"
+#include "Buzzer.h"
+#include "OLED.h"
+#include "detect_position.h"
+#include "Task.h"
+
+
+#define MAX_DUTY 180
+
+extern uint8_t motorA_dir;
+extern uint8_t motorB_dir;
+
+extern int16_t Encoder_countA;
+extern int16_t Encoder_countB;
+
+extern int16_t A;
+extern int16_t B;
+
+extern float angle_now; 
+
+extern pid_t motorA;
+extern pid_t motorB;
+extern pid_t angle;
+extern pid_t trackLIne;
+
+extern uint16_t SoundLight_flag;
+extern uint16_t SoundLight_time;
+
+extern uint16_t Task;
+extern uint16_t first_flag;
+extern uint16_t start_flag;
+extern uint16_t Line_flag;
+extern uint16_t angle_flag;
+extern uint16_t angle_initial;
+extern uint16_t workstep;
+extern float basespeed;
+extern uint16_t angle_record1;
+extern uint16_t angle_record2; 
+extern uint16_t angle_record3; 
+extern uint16_t angle_record4;
+extern int currentValue;
+extern float p;
+extern float i;
+extern float d;
+
+
+//extern int16_t AX;
+//extern int16_t AY;
+//extern int16_t AZ;
+//extern int16_t GX;
+//extern int16_t GY;
+extern int16_t GZ;
+extern float yaw_gyro;
+extern float tar;
+#endif
